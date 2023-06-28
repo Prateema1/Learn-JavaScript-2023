@@ -1,14 +1,21 @@
+// var globalVaribale = 10;    // Global variable
 
-console.log(x);
-getGreeting();
-getName();
+// function notGlobalVariable () {
+//     var a = 20;    // Not a global variable
+// }
 
-var x = 10;
-function getGreeting () {
-    console.log("Hello World!");
+// notGlobalVariable();
+
+
+// Scope Chain, Lexical Scope
+
+function a() {
+    var a = 20;
+    c();
+    function c() {
+      console.log(a);
+    }
 }
 
-var getName = () => {
-    console.log("Hello Jack!");
-}
-
+a();
+console.log(a);

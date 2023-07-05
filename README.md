@@ -111,3 +111,7 @@ var a = 20; // This is correct shadowing
 {
 var a = 20; // Illegal shadowing
 }
+
+## Closures in JavaScript
+
+--- Function bundled together with its lexical scope forms a closure.

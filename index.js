@@ -30,15 +30,83 @@
 
 // Block Scope
 
-{
+// {
+//     var a = 10;
+//     let b = 20;
+//     const c = 30;
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+
+// var a = 10;
+// console.log(a);
+// var a = 20;
+// console.log(a);
+// var a = 30;
+// console.log(a);
+
+// let a = 10;
+// console.log(a);
+// a = 20;
+// console.log(a);
+
+// function abc() {
+//     console.log(a);
+//     var a = 20;
+// }
+
+// abc();
+
+// const a = 10;
+
+
+// CLosures in JS
+
+// function x() {
+//     var a = 10;
+//     function y() {
+//         console.log(a);
+//     }
+//     return y;
+// }
+
+// var z = x();  
+// console.log(z);
+// z();
+
+//OR
+
+// function x() {
+//     var a = 10;
+//     return function y() {
+//         console.log(a);
+//     }
+// }
+
+// var z = x();  
+// console.log(z);
+// //.....
+// z();
+
+
+// Output Based QUestions in Closure
+
+ 
+function x() {
     var a = 10;
-    let b = 20;
-    const c = 30;
-    console.log(a);
-    console.log(b);
-    console.log(c);
+    function y() {
+        console.log(a);
+    }
+    a = 100;
+    return y;
 }
 
-    console.log(a);
-    console.log(b);
-    console.log(c);
+var z = x();  
+console.log(z);
+//.....
+z();

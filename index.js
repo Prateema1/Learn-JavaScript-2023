@@ -97,16 +97,51 @@
 // Output Based QUestions in Closure
 
  
+// function x() {
+//     var a = 10;
+//     function y() {
+//         console.log(a);
+//     }
+//     a = 100;
+//     return y;
+// }
+
+// var z = x();  
+// console.log(z);
+// //.....
+// z();
+
+// SetTimeout + Closures In JS
+//Print 1 t0 n number after n seconds
+
+// function x() {
+//     for(var i = 1; i <= 5; i++) {
+//         setTimeout(function () {
+//             console.log(i);
+//         }, i * 1000);
+//     }
+
+//     console.log("Hello World!");
+// }
+
+// x();
+
+//For each copy of the function the i points to same reference of it.
+// Can solve this by using let instead of var as let is block scope and with each function new copy of i is available.
+
+// Another way without using let is to use var only but we need to put our setTimeout function function inside aother function (closure)
+
 function x() {
-    var a = 10;
-    function y() {
-        console.log(a);
+    for(var i = 1; i <= 5; i++) {
+        function close(x) {
+            setTimeout(function () {
+                console.log(x);
+            }, x * 1000);
+        }
+        close(i);
     }
-    a = 100;
-    return y;
+
+    console.log("Hello World!");
 }
 
-var z = x();  
-console.log(z);
-//.....
-z();
+x();
